@@ -1,9 +1,10 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Container from "@/components/Container";
 
-const page = () => {
+const Home = () => {
   return (
-    <div className="p-10 bg-shop_light_pink">
+    <Container className="p-10 bg-shop_light_pink">
       <h2 className="text-xl font-semibold">Home</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
@@ -14,8 +15,8 @@ const page = () => {
         nesciunt ex?
       </p>
       <Button>Click</Button>
-    </div>
+    </Container>
   );
 };
 
-export default page;
+export default Home;
