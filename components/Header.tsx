@@ -1,10 +1,15 @@
 import React from "react";
 import Container from "./Container";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
     <header>
-      <Container className="bg-amber-200">Header</Container>
+      <Container className="bg-white py-5">
+        <Logo />
+        <header>
+        {/* NavMenu */}
+      </Container>
     </header>
   );
 };
