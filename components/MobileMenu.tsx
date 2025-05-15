@@ -16,7 +16,7 @@ const MobileMenu = () => {
         <SideMenu
           isOpen={isSidebarOpen}
           onClose={() => setIsSidebarOpen(false)}
-        />
+        /> 
       </div>
     </div>
   );
