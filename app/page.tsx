@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Container from "@/components/Container";
+import HomeBanner from "@/components/HomeBanner";
 
 const Home = () => {
   return (
-    <Container className="p-10 bg-shop_light_pink">
-      <h2 className="text-xl font-semibold">Home</h2>
+    <Container>
+      {/* <h2 className="text-xl font-semibold">Home</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
         voluptas obcaecati ratione tempore ut, reiciendis velit hic culpa sed
@@ -14,7 +15,8 @@ const Home = () => {
         totam aliquid assumenda quae praesentium excepturi sit sapiente ullam
         nesciunt ex?
       </p>
-      <Button>Click</Button>
+      <Button>Click</Button> */}
+      <HomeBanner />
     </Container>
   );
 };
