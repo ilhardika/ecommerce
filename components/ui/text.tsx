@@ -22,4 +22,8 @@ const SubText = ({ children, className }: TitleProps) => {
   return <h2 className={cn("text-gray-600 text-sm", className)}>{children}</h2>;
 };
 
-export { Title, SubText };
+const SubTitle = ({ children, className }: TitleProps) => {
+  return <h2 className={cn("font-semibold font-sans text-gray-900", className)}>{children}</h2>;
+};
+
+export { Title, SubText, SubTitle };
