@@ -18,4 +18,8 @@ const Title = ({ children, className }: TitleProps) => {
   );
 };
 
-export default Title;
+const SubText = ({ children, className }: TitleProps) => {
+  return <h2 className={cn("text-gray-600 text-sm", className)}>{children}</h2>;
+};
+
+export { Title, SubText };
