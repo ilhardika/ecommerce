@@ -5,7 +5,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-poppins antialiased">{children}</body>
+      <body className="font-poppins antial" suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }

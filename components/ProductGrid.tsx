@@ -8,6 +8,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Loader2 } from "lucide-react";
 import NoProductAvailable from "./NoProductAvailable";
 import { Product } from "@/sanity.types";
+import ProductCard from "./ProductCard";
 
 const ProductGrid = () => {
   const [products, setProducts] = useState<Product[]>([]); //product type is defined in sanity.types
@@ -48,7 +49,7 @@ const ProductGrid = () => {
           {products.map((product) => (
             <AnimatePresence key={product._id}>
               <motion.div>
-                <div>{product.name}</div>
+                <ProductCard product={product} />
               </motion.div>
             </AnimatePresence>
           ))}
