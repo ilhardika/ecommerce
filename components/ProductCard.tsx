@@ -1,10 +1,11 @@
 import { Product } from "@/sanity.types";
 import { urlFor } from "@/sanity/lib/image";
-import { Flame } from "lucide-react";
+import { Flame, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AddToWishlistButton from "./AddToWishlistButton";
+import { Title } from "./ui/text";
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (
@@ -45,7 +46,32 @@ const ProductCard = ({ product }: { product: Product }) => {
           </Link>
         )}
       </div>
-      <div className="p-3"></div>
+      <div className="p-3 flex flex-col gap-2">
+        <p className="uppercase line-clamp-1 text-sm text-gray-500">
+          {product?.categories?.map((cat) => cat).join(", ")}
+        </p>
+        <Title className="text-sm line-clamp-1">{product?.name}</Title>
+        <div>
+          <div className="flex items-center gap-1">
+            {[0, 1, 2, 3, 4].map((index) => (
+              <StarIcon
+                key={index}
+                size={13}
+                className={
+                  index < 4
+                    ? "text-green-500 fill-green-500"
+                    : "text-gray-400 fill-gray-400"
+                }
+              />
+            ))}
+            <span className="text-xs ml-1 text-gray-400">7 Reviews</span>
+          </div>
+          <p className="mt-2">
+            In Stock{" "}
+            {(product?.stock as number) > 0 ? product.stock : "unavailable"}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
