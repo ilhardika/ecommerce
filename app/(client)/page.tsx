@@ -2,14 +2,17 @@ import React from "react";
 import Container from "@/components/Container";
 import HomeBanner from "@/components/HomeBanner";
 import ProductGrid from "@/components/ProductGrid";
+import HomeCategories from "@/components/HomeCategories";
+import { getCategories } from "@/sanity/queries";
 
-const Home = () => {
+const Home = async () => {
+  const categories = await getCategories(6);
+  console.log("Fetched Categories:", categories);
   return (
-    <Container>
+    <Container className="space-y-10">
       <HomeBanner />
-      <div className="py-10 ">
-        <ProductGrid />
-      </div>
+      <ProductGrid />
+      <HomeCategories categories={categories} />
     </Container>
   );
 };

@@ -73,7 +73,7 @@ const ProductCard = ({ product }: { product: Product }) => {
             {(product?.stock as number) > 0 ? product.stock : "unavailable"}
           </p>
           <PriceView price={product.price} discount={product.discount} />
-          <AddToCartButton product={product} clssName="w-36 rounded-full" />
+          <AddToCartButton product={product} className="w-36 rounded-full" />
         </div>
       </div>
     </div>
